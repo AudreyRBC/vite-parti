@@ -1,0 +1,43 @@
+{
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#f7dd37",
+    "titleBar.activeForeground": "#000000",
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    "javascript"
+  ],
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "workbench.iconTheme": "vscode-great-icons",
+  "files.associations": {
+    "*.twig": "html"
+  },
+  "[typescriptreact]": {},
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "stylelint.validate": [
+    "css",
+    "less",
+    "postcss",
+    "scss"
+  ],
+  "[scss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[postcss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[twig]": {
+    "editor.defaultFormatter": "mblode.twig-language-2"
+  },
+  "extensions.ignoreRecommendations": true,
+  "editor.indentSize": "tabSize",
+}

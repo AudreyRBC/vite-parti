@@ -1,0 +1,41 @@
+{
+  "name": "viteparti",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "author": {
+    "name": "Audrey Robic",
+    "email": "arobic@vanksen.com"
+  },
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc && vite build --mode production",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vituum/vite-plugin-twig": "^1.0.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.9",
+    "vituum": "^1.0.0"
+  },
+  "dependencies": {
+    "css-loader": "^6.7.3",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-import-resolver-webpack": "^0.13.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "fuse.js": "^6.6.2",
+    "postcss-loader": "^7.0.2",
+    "postcss-preset-env": "^7.8.3",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "stylelint": "^15.6.1",
+    "stylelint-config-standard": "^32.0.0",
+    "stylelint-config-standard-scss": "^8.0.0",
+    "stylelint-order": "^6.0.3",
+    "stylelint-scss": "^4.6.0",
+    "stylelint-webpack-plugin": "^4.1.1",
+    "vite-plugin-live-reload": "^3.0.2"
+  }
+}

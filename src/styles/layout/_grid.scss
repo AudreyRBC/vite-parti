@@ -1,0 +1,34 @@
+:root {
+
+  /* ---- Grid settings */
+
+  /* Add all breakpoints needed when a value has to be changed. */
+
+  --origin-width: 375; /* Window width base to calculate columns | based on design mobile */
+  --origin-margin: 20px; /* Margin between border screen and border container | Size based on design mobile */
+  --columns-count: 4; /* Number of columns in the grid | based on design mobile */
+  --columns-gap: 20px; /* Spacing Gutters | based on design mobile */
+  --rows-gap: 20px; /* Spacing Gutters | based on design mobile */
+  
+  /* --- Do not change | start */
+
+  /* Those variables are automaticly calculated by the JS. */
+
+  /* This is just pre-render before JS initialization. */
+  --columns-size: calc((100vw - (var(--margin) * 2)) / var(--columns-count));
+  --width: calc(100vw - (var(--margin) * 2)); 
+  --margin: var(--origin-margin); 
+
+  /* --- Do not change | end */
+
+  @include media-min(sm) {
+    --origin-width: 769; /* Window width base to calculate columns | based on design or not; */
+    --origin-margin: 40px; /* Margin between border screen and border container | based on design desktop; */
+    --columns-count: 8; /* Number of columns in the grid | based on design or not; */
+  }
+  @include media-min(xl) {
+    --origin-width: 1680; /* Window width base to calculate columns | based on design desktop; */
+    --origin-margin: 142px;
+    --columns-count: 12;/* Number of columns in the grid | based on design desktop; */
+  }  
+}

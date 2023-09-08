@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% block head %}
+  {% include '@base/head.html.twig' %}
+{% endblock %}
+
+<body class="{{current.bodyclass}}">
+  {% block header %}{% endblock %}
+
+  <main>
+    {% block main %}{% endblock %}
+  </main>
+
+  {% block footer %}{% endblock %}
+  
+  {% include '@base/js.html.twig' %}
+  {% block scripts %}{% endblock %}
+</html>

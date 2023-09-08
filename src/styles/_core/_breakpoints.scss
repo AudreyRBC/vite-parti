@@ -1,0 +1,80 @@
+@use 'sass:map';
+
+/* ----Responsive breakpoints---- */
+$breakpoints: (
+  zero: var(--zero, 0),
+  2xs:  var(--2xs, 375px),
+  xs:  var(--xs, 450px),
+  sm:  var(--sm, 769px),
+  md:  var(--sm, 980px),
+  lg:   var(--sm, 1024px),
+  xl:   var(--sm, 1100px),
+  xxl:  var(--sm, 1280px),
+  xxxl:  var(--sm, 1440px),
+  full:  var(--sm, 1728px)
+);
+
+
+/* ----Minimum size---- */
+
+@mixin media-min($bp) {
+
+  $value: $bp;
+
+  @if map-has-key($breakpoints, $bp) {
+    $value: map.get($breakpoints, $bp);}
+
+  @media screen and (min-width: $value) {
+    @content;
+  }
+
+}
+
+/* ----Maximum size---- */
+@mixin media-max($bp) {
+
+  $value: $bp;
+
+  @if map-has-key($breakpoints, $bp) {
+    $value: map.get($breakpoints, $bp);
+  }
+
+  @media screen and (max-width: #{$value - 1}) {
+    @content;
+  }
+}
+
+/* ----Between minimum size & maximum size---- */
+@mixin media-minmax($min, $max) {
+  $valueMin: $min;
+
+  @if map-has-key($breakpoints, $min) {
+    $valueMin: map.get($breakpoints, $min);
+  }
+
+  $valueMax: $max;
+
+  @if map-has-key($breakpoints, $max) {
+    $valueMax: map.get($breakpoints, $max);
+  }
+
+  @media screen and (min-width: $valueMin) and (max-width: #{$valueMax - 1}) {
+    @content;
+  }
+}
+
+
+/*
+@media (pointer: fine) {
+  //using a mouse or stylus - ok to use small buttons/controls
+}
+@media (pointer: coarse) {
+  //using touch - make buttons and other "touch targets" bigger
+}
+@media (hover: hover) {
+  //ok to use :hover-based menus
+}
+@media (hover: none) {
+  //don't use :hover-based menus
+}
+*/

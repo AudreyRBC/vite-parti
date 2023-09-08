@@ -1,0 +1,28 @@
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="{{ current.meta.description }}">
+
+  <title>{{ current.meta.title }} {{titleHeader}}</title>
+
+  {% include '@base/css.html.twig' %}
+
+  {# <link rel="icon" href="{{ asset_url( "img/favicon.png" ) }}"> #}
+  {# <link rel="apple-touch-icon" href="{{ asset_url( "img/apple-touch-icon.png" ) }}"> #}
+
+  <meta property="og:description" content="{{ current.meta.description }}">
+  <meta property="og:title" content="{{ current.meta.title }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ current.meta.url }}">
+  <meta property="og:image" content="{{ current.meta.image }}">
+
+  <meta name="twitter:description" content="{{ current.meta.description }}">
+  <meta name="twitter:title" content="{{ current.meta.title }}">
+  <meta name="twitter:image:src" content="{{ current.meta.image }}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="{{ color }}">
+  <meta name="msapplication-navbutton-color" content="{{ color }}">
+  
+</head>

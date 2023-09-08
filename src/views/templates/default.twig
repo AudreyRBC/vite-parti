@@ -1,0 +1,21 @@
+{% extends '@base/base.html.twig' %}
+
+{% block header %}
+	{% include '@common/header/header.twig' %}
+{% endblock %}
+
+{% block main %}
+	{% include "@components/hero.twig" %}
+	{% if components %}
+		{% for component in components %}
+			{% if component.component %}
+				{% include "@components/"~ component.component ~".twig" with {item: component} %}
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+{% endblock %}
+
+
+{% block footer %}
+	{# {% include '@common/footer/footer.twig' %} #}
+{% endblock %}

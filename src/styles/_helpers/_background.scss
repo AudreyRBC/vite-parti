@@ -1,0 +1,25 @@
+@mixin background(
+  $width: var(--width), 
+  $height: 100%, 
+  $color:var(--grey-light),
+  $top: 0
+) {
+  content: '';
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+
+  display: block;
+
+
+  width: $width;
+  height: $height;
+  
+  background: $color;
+
+  transform: translateX(-50%) translateY(-50%);
+
+  @content;
+}
