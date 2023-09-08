@@ -3,7 +3,7 @@ import path from "path";
 import { defineConfig } from "vite"
 import twigConfig from "./twig.config";
 
-const defaultConfig = (mode) => ({
+const defaultConfig = ({ mode }) => ({
 		build: {
 			manifest: false,
 			modulePreload: true,
